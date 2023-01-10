@@ -1,4 +1,5 @@
 algoritmo "contador diversos"
+//feito por Pelvisbreak//
 var
 cont,valor,nulo,soma,somapar,impar,divi5:inteiro
 media:real
