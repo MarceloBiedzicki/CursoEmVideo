@@ -14,7 +14,7 @@ fib1<-0
 fib2<-1
 escreval(fib1)
 escreval(fib2)
-para c<-1 ate 10 faca
+para c<-1 ate 15 faca
     ProximoFibonacci(fib1,fib2)
 fimpara
 fimalgoritmo
