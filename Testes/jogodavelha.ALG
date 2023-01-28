@@ -50,12 +50,7 @@ var
 fim,bleavers:inteiro
 inicio
 fim<-0
-se (v[1,1] = v[2,2]) e (v[2,2] = v[3,3]) entao
-   fim<-1
-fimse
-se (v[1,3] = v[2,2]) e (v[2,2] = v[3,1]) entao
-   fim<-1
-fimse
+
 para linha<-1 ate 3 faca
      se (v[linha,1] = v[linha,2]) e (v[linha,2] = v[linha,3]) entao
          fim<-1
@@ -76,6 +71,12 @@ fimpara
 se bleavers=0 entao
    fim<-2
 fimse
+se (v[1,1] = v[2,2]) e (v[2,2] = v[3,3]) entao
+   fim<-1
+fimse
+se (v[1,3] = v[2,2]) e (v[2,2] = v[3,1]) entao
+   fim<-1
+fimse
 retorne fim
 fimfuncao
 
@@ -89,7 +90,7 @@ para linha<-3 ate 1 passo -1 faca
     fimpara
 fimpara
 repita
-       mostrajogo
+       mostrajogo()
        repita
            escreval
            escreva("Marque onde o jogador ",marca," irá jogar. ")
@@ -98,15 +99,15 @@ repita
            se jogada=falso entao
              escreval("jogada invalida")
            fimse
-       ate jogada=verdadeiro
+       ate (jogada=verdadeiro)
        mudaplayer(marca)
        limpatela
-ate fimjogo <> 0
-mostrajogo
-se fimjogo = 2 entao
+ate (fimjogo <> 0)
+mostrajogo()
+se (fimjogo = 2) entao
    escreva("A partida foi um empate!")
 senao
-   se marca="X" entao
+   se (marca="X") entao
       escreva("O foi o vencedor")
    senao
       escreva("X foi o vencedor")
