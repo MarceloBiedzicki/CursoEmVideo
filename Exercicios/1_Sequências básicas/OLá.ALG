@@ -2,5 +2,5 @@ algoritmo "Olá"
 var
 
 inicio
-escreval("Olá mundo!")
+  escreval("Olá mundo!")
 fimalgoritmo
